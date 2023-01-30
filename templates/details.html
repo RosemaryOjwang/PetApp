@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Pet Details</h1>
+    <h4>{{ pet.name|capfirst}}</h4>
+    <p>Species: {{pet.species}}</p>
+    {% if pet.breed %} 
+        <p>Breed: {{pet.breed}}</p>
+    {% endif %} 
+
+    {% if pet.age %} 
+        <p>Age: {{pet.age}}</p>
+    {% endif %}
+
+    {% if pet.sex %} 
+        <p>Gender: {{pet.gender}}</p>
+    {% endif %} 
+
+    {% if pet.vacciness.all %} 
+        <p>Vaccinations for: </p>
+        <ul>
+            {% for vaccine in pet.vaccines.all %} 
+                <li>{{ vaccines.name }}</li>
+            {% endfor %} 
+    {% endif %} 
+    
+
+
+        
+        </ul>
+
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption App</title>
+</head>
+<body>
+    <h3>Pets will be listed here from the database!!</h3>
+    {% if pets %}
+    <ul>
+        {% for pet in pets %}
+        <li>Name: {{ pet.name }}</li>
+        <li>Gender: {{ pet.gender }}</li>
+        <li>Age: {{ pet.age }}</li>
+        <li>Description: {{ pet.description }}</li>
+        <hr>
+        {% endfor %}
+    </ul>
+    {% endif %}    
+</body>
+</html>
